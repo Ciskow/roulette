@@ -1,0 +1,84 @@
+.roulette-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.wheel-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.pointer-triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid white;
+}
+
+.wheel-svg-container {
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.wheel-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px dashed #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    color: #666;
+}
+
+.spin-button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 0 #8a00bc;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.spin-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #8a00bc;
+}
+
+.spin-button:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #8a00bc;
+}
+
+.spin-button:disabled {
+    background-color: #444;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+text {
+    font-family: 'Inter', sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}

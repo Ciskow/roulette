@@ -1,0 +1,59 @@
+.title-editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.title-editor h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    text-shadow: 0 0 30px rgba(189, 0, 255, 0.3);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.title-input {
+    font-size: 3rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    color: white;
+    text-align: center;
+    font-family: inherit;
+    width: 100%;
+    max-width: 600px;
+    outline: none;
+    padding: 0 0.5rem;
+}
+
+.edit-btn {
+    background: var(--accent-color);
+    border-radius: 50%;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    opacity: 0.8;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+}
+
+.edit-btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.6);
+}
+
+.title-editor:hover .edit-btn {
+    opacity: 1;
+}
